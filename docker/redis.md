@@ -2,8 +2,8 @@
 title: Docker部署Redis服务
 description: 
 published: 1
-date: 2022-08-06T14:09:52.320Z
-tags: 
+date: 2022-08-06T15:06:02.017Z
+tags: docker, redis
 editor: markdown
 dateCreated: 2022-08-06T14:09:52.320Z
 ---
