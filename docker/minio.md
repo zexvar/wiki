@@ -2,10 +2,10 @@
 title: Docker部署Minio服务
 description: 
 published: 1
-date: 2022-08-06T14:39:30.464Z
-tags: 
+date: 2022-08-06T15:06:42.123Z
+tags: docker, minio
 editor: markdown
-dateCreated: 2022-08-06T14:39:30.464Z
+dateCreated: 2022-08-06T14:47:23.521Z
 ---
 
 ### MinIO
