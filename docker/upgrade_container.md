@@ -2,10 +2,10 @@
 title: Docker升级容器
 description: 通过watchtower更新容器使用镜像版本
 published: 1
-date: 2022-08-07T14:40:38.993Z
+date: 2022-08-24T19:30:59.559Z
 tags: docker
 editor: markdown
-dateCreated: 2022-08-07T14:40:09.724Z
+dateCreated: 2022-08-07T14:47:05.026Z
 ---
 
 ### Docker升级容器
