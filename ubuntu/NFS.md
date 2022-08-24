@@ -2,10 +2,10 @@
 title: Ubuntu NFS 服务端和客户端配置
 description: 
 published: 1
-date: 2022-08-08T20:19:33.849Z
-tags: ubuntu, nfs
+date: 2022-08-24T19:26:42.462Z
+tags: nfs, ubuntu
 editor: markdown
-dateCreated: 2022-08-08T20:19:33.849Z
+dateCreated: 2022-08-08T20:26:46.449Z
 ---
 
 # Ubuntu NFS 服务端和客户端配置
