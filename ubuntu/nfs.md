@@ -2,10 +2,10 @@
 title: Ubuntu NFS 服务端和客户端配置
 description: 
 published: 1
-date: 2022-08-24T19:26:42.462Z
+date: 2022-08-26T06:31:52.722Z
 tags: nfs, ubuntu
 editor: markdown
-dateCreated: 2022-08-08T20:26:46.449Z
+dateCreated: 2022-08-24T19:45:50.213Z
 ---
 
 # Ubuntu NFS 服务端和客户端配置
@@ -64,5 +64,10 @@ sudo apt install nfs-common
 mkdir -p /nfs-clinet
 mount 192.168.0.100:/nfs /nfs-clinet
 ```
-
-
+## NFS开机自动挂载
+重启后服务器后,之前挂载的NFS会消失,因此添加开机自动挂载:
+``` bash
+sudo vim /etc/fstab
+# 添加下列内容
+192.168.0.100:/nfs     /nfs-clinet       nfs     defaults  0  0
+```
