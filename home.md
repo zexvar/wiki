@@ -1,8 +1,8 @@
 ---
-title: Welcome
+title: Home
 description: Welcome to this wiki!
 published: 1
-date: 2022-08-28T11:22:45.058Z
+date: 2022-09-02T12:44:05.945Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-15T10:42:07.905Z
