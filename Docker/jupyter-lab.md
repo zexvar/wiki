@@ -2,7 +2,7 @@
 title: Docker部署 jupyter lab服务
 description: 
 published: 1
-date: 2022-09-04T18:00:50.397Z
+date: 2022-09-04T18:13:10.741Z
 tags: docker, jupyter
 editor: markdown
 dateCreated: 2022-09-04T18:00:50.397Z
@@ -30,6 +30,7 @@ dateCreated: 2022-09-04T18:00:50.397Z
     docker run -itd --restart=always \
     --name jupyterlab \
     -p 8888:8888 \
+    -v /opt/jupyterlab/data:/root/data \
     jupyterlab
     ```
     
