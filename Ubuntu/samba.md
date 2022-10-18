@@ -2,7 +2,7 @@
 title: Ubuntu samba 服务端配置
 description: 
 published: 1
-date: 2022-09-02T12:57:21.021Z
+date: 2022-10-18T19:01:00.175Z
 tags: 
 editor: markdown
 dateCreated: 2022-09-02T12:57:21.021Z
@@ -47,4 +47,20 @@ directory mask = 777
 service smbd start      #启动
 service smbd stop       #停止
 service smbd restart    #重启
+```
+## Ubuntu 客户端挂载
+
+* 安装客户端
+```bash
+sudo apt install cifs-utils 
+```
+
+* 创建挂载点并挂载
+```bash
+mkdir /share
+mount //xx.xx.xx.xx/share /share -o username=admin,password=123456,uid=0,gid=0
+```
+* 开机自动挂载 `vim /etc/fstab`
+```bash
+//xx.xx.xx.xx/share /share/ cifs defaults,username=admin,password=123456,uid=0,gid=0 0 0
 ```
