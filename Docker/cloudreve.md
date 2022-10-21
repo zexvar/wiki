@@ -1,24 +1,24 @@
 ---
-title: Docker部署Cloudreve私人网盘
+title: Docker Cloudreve私人网盘
 description: 
 published: 1
-date: 2022-08-26T06:39:47.754Z
-tags: docker, cloud
+date: 2022-10-21T18:22:58.970Z
+tags: cloud, docker
 editor: markdown
 dateCreated: 2022-08-26T06:39:47.754Z
 ---
 
-### Cloudreve
-1. 持久化部署
-* 创建目录
+1. 创建目录
     ```bash
     mkdir -p /opt/cloudreve/uploads
     mkdir -p /opt/cloudreve/avatar
     ```
-* 创建配置文件 添加以下内容:
+2. 设置mysql数据库作为存储
+    * 创建配置文件
     ```bash
     vim /opt/cloudreve/conf.ini
     ```
+    * 添加以下内容
     ```ini
     [Database]
     Type = mysql
@@ -31,7 +31,7 @@ dateCreated: 2022-08-26T06:39:47.754Z
     Charset = utf8
     ```
 
-* 启动容器
+3. 启动容器
     ```bash
     docker run -d --restart=always --privileged=true \
     -p 80:5212 --name cloudreve \
