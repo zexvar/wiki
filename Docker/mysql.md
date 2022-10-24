@@ -1,20 +1,21 @@
 ---
-title: Docker部署Mysql服务
+title: Mysql 数据库部署
 description: 
 published: 1
-date: 2022-08-07T14:35:52.572Z
+date: 2022-10-24T13:04:07.810Z
 tags: docker, mysql
 editor: markdown
 dateCreated: 2022-07-15T14:23:16.190Z
 ---
 
-### Mysql
-1. 临时部署: 
+### Docker 临时部署: 
+* 拉取容器 `docker pull mysql`
+* 运行容器
     ```bash
-    docker run --restart=always --privileged=true  -p 3306:3306 --name mysql   -e MYSQL_ROOT_PASSWORD=123456 -d mysql
+    docker run --restart=always --privileged=true -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql
     ```
 
-2. 持久化部署
+### Docker 持久化部署
 * 创建目录
     ```bash
     mkdir -p /opt/mysql/logs/
@@ -41,7 +42,7 @@ vim /opt/mysql/my.cnf
     ```
 * 启动容器
     ```bash
-    docker run --restart=always --privileged=true  \
+    docker run --restart=always \
     -p 3306:3306 --name mysql \
     -v /opt/mysql/data:/var/lib/mysql \
     -v /opt/mysql/logs:/var/log/mysql \
