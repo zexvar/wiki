@@ -1,21 +1,21 @@
 ---
-title: Docker部署Redis服务
+title: Redis 数据库部署
 description: 
 published: 1
-date: 2022-08-06T15:06:02.017Z
+date: 2022-10-24T13:01:12.675Z
 tags: docker, redis
 editor: markdown
 dateCreated: 2022-08-06T14:09:52.320Z
 ---
 
 ### Redis
-1. 临时部署: 
+1. Docker 临时部署: 
 * 通过 `--requirepass` 设置redis密码
   ```bash
   docker run -itd --restart=always --name redis -p 6379:6379 redis --requirepass 123456
   ```
   
-2. 持久化部署
+2. Docker 持久化部署
 * 创建目录
   ```bash
     mkdir -p /opt/redis/conf
