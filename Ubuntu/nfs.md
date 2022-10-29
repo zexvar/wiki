@@ -2,13 +2,12 @@
 title: Ubuntu NFS 服务端和客户端配置
 description: 
 published: 1
-date: 2022-08-26T06:31:52.722Z
+date: 2022-10-29T17:09:49.298Z
 tags: nfs, ubuntu
 editor: markdown
 dateCreated: 2022-08-24T19:45:50.213Z
 ---
 
-# Ubuntu NFS 服务端和客户端配置
 ## NFS服务端搭建
 ### 启动NFS服务
 * sudo apt install nfs-kernel-server
