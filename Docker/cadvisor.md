@@ -2,8 +2,8 @@
 title: Docker部署cadvisor监控容器服务
 description: 
 published: 1
-date: 2022-10-12T04:14:27.664Z
-tags: cadvisor, docker
+date: 2022-10-12T04:14:29.489Z
+tags: docker, cadvisor
 editor: markdown
 dateCreated: 2022-10-12T04:10:42.036Z
 ---

@@ -2,7 +2,7 @@
 title: Docker watchtower升级容器
 description: 
 published: 1
-date: 2022-10-21T18:20:18.805Z
+date: 2022-10-21T18:20:20.612Z
 tags: docker, watchtower, upgrade
 editor: markdown
 dateCreated: 2022-08-24T19:45:45.599Z

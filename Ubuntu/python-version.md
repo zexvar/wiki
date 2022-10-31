@@ -2,7 +2,7 @@
 title: Ubuntu 默认python3配置
 description: 
 published: 1
-date: 2022-09-02T12:47:29.588Z
+date: 2022-09-02T12:47:31.261Z
 tags: ubuntu
 editor: markdown
 dateCreated: 2022-09-02T12:47:29.588Z

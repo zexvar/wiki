@@ -2,10 +2,10 @@
 title: ESXI RDM磁盘直通
 description: 
 published: 1
-date: 2022-08-24T08:53:56.019Z
+date: 2022-09-02T07:48:18.305Z
 tags: esxi
 editor: markdown
-dateCreated: 2022-08-24T05:13:43.297Z
+dateCreated: 2022-08-24T19:45:47.895Z
 ---
 
 # ESXI 设置RDM磁盘直通

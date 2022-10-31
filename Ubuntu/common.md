@@ -2,7 +2,7 @@
 title: Ubuntu 常用设置
 description: 
 published: 1
-date: 2022-09-02T12:51:59.995Z
+date: 2022-09-02T12:52:01.651Z
 tags: ubuntu
 editor: markdown
 dateCreated: 2022-09-02T12:51:59.995Z

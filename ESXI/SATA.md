@@ -2,7 +2,7 @@
 title: ESXI 直通SATA控制器
 description: 
 published: 1
-date: 2022-10-18T18:34:56.819Z
+date: 2022-10-18T18:34:58.733Z
 tags: esxi
 editor: markdown
 dateCreated: 2022-10-18T18:34:56.819Z

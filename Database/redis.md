@@ -2,7 +2,7 @@
 title: Redis 数据库部署
 description: 
 published: 1
-date: 2022-10-24T13:01:12.675Z
+date: 2022-10-24T13:01:14.674Z
 tags: docker, redis
 editor: markdown
 dateCreated: 2022-08-06T14:09:52.320Z

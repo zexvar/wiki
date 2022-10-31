@@ -2,7 +2,7 @@
 title: Minio 文件存储服务部署
 description: 
 published: 1
-date: 2022-10-24T13:06:10.215Z
+date: 2022-10-24T13:06:12.117Z
 tags: docker, minio
 editor: markdown
 dateCreated: 2022-08-06T14:47:23.521Z

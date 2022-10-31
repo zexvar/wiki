@@ -2,7 +2,7 @@
 title: Ubuntu 配置静态ip
 description: 
 published: 1
-date: 2022-08-28T11:27:59.738Z
+date: 2022-09-02T07:45:41.974Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-28T11:26:07.879Z

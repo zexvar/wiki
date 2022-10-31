@@ -1,14 +1,14 @@
 ---
-title: Ubuntu samba 服务端配置
+title: Ubuntu Samba 服务搭建和使用
 description: 
 published: 1
-date: 2022-10-18T19:01:00.175Z
+date: 2022-10-29T17:43:31.620Z
 tags: 
 editor: markdown
 dateCreated: 2022-09-02T12:57:21.021Z
 ---
 
-## samba 服务端配置
+## Samba 服务端配置
 * 安装samba
 ```bash
 sudo apt-get install samba
@@ -48,7 +48,7 @@ service smbd start      #启动
 service smbd stop       #停止
 service smbd restart    #重启
 ```
-## Ubuntu 客户端挂载
+## Samba 客户端挂载
 
 * 安装客户端
 ```bash
