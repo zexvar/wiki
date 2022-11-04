@@ -2,7 +2,7 @@
 title: Home
 description: Welcome to this wiki!
 published: 1
-date: 2022-11-04T09:37:18.194Z
+date: 2022-11-04T09:38:41.907Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-15T10:42:07.905Z
@@ -17,7 +17,7 @@ dateCreated: 2022-07-15T10:42:07.905Z
             </div>
             <div class="col-sm-4">
                 <img width="95%" height="95%"
-                    src="http://yuxuan.work:9000/images/Mirror%202%20Project%20X/X%20emoji%20DLC/1.png">
+                    src="https://yuxuan.work:9000/images/Mirror%202%20Project%20X/X%20emoji%20DLC/1.png">
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@ dateCreated: 2022-07-15T10:42:07.905Z
         <div class="row align-items-center">
             <div class="col-md" align="center">
                 <img height="400px"
-                    src="http://yuxuan.work:9000/images/Mirror%202%20Project%20X/X%20emoji%20DLC/4.png">
+                    src="https://yuxuan.work:9000/images/Mirror%202%20Project%20X/X%20emoji%20DLC/4.png">
             </div>
             <div class="col-md">
                 <h2>Question</h2>
