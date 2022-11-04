@@ -1,11 +1,11 @@
 ---
 title: Home
 description: Welcome to this wiki!
-published: 1
-date: 2022-11-04T09:38:41.907Z
+published: true
+date: 2022-11-04T13:21:27.336Z
 tags: 
 editor: markdown
-dateCreated: 2022-07-15T10:42:07.905Z
+dateCreated: 2022-11-04T13:20:02.228Z
 ---
 
 <section class="bg-red">
@@ -47,24 +47,24 @@ dateCreated: 2022-07-15T10:42:07.905Z
 
 
 <style>
-    .bg-red {
-        color: #eeeeee;
-        background-color: rgb(161, 26, 44);
-    }
+  .bg-red {
+    color: #eeeeee;
+    background-color: rgb(161, 26, 44);
+  }
 
-    .bg-yellow {
-        background-color: rgb(209, 160, 0);
-    }
+  .bg-yellow {
+    background-color: rgb(209, 160, 0);
+  }
 
-    .align-items-center {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-align-items: center;
-        align-items: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-    }
+  .align-items-center {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
 </style>
