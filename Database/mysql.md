@@ -1,11 +1,11 @@
 ---
 title: Mysql 数据库部署
 description: 
-published: 1
-date: 2022-10-24T13:04:09.756Z
+published: true
+date: 2022-11-14T12:40:10.692Z
 tags: docker, mysql
 editor: markdown
-dateCreated: 2022-07-15T14:23:16.190Z
+dateCreated: 2022-11-04T13:20:07.870Z
 ---
 
 ### Docker 临时部署: 
@@ -21,25 +21,7 @@ dateCreated: 2022-07-15T14:23:16.190Z
     mkdir -p /opt/mysql/logs/
     mkdir -p /opt/mysql/data/
     ```
-* 创建my.cnf配置文件 添加以下内容:
-vim /opt/mysql/my.cnf
 
-    ```ini
-    [mysqld]
-    user=mysql
-    character-set-server=utf8
-    default_authentication_plugin=mysql_native_password
-    secure_file_priv=/var/lib/mysql
-    expire_logs_days=7
-    sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
-    max_connections=1000
-
-    [client]
-    default-character-set=utf8
-
-    [mysql]
-    default-character-set=utf8
-    ```
 * 启动容器
     ```bash
     docker run --restart=always \
