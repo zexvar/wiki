@@ -2,7 +2,7 @@
 title: Mysql 数据库部署
 description: 
 published: true
-date: 2022-11-14T12:40:10.692Z
+date: 2022-11-14T12:40:19.925Z
 tags: docker, mysql
 editor: markdown
 dateCreated: 2022-11-04T13:20:07.870Z
@@ -28,6 +28,5 @@ dateCreated: 2022-11-04T13:20:07.870Z
     -p 3306:3306 --name mysql \
     -v /opt/mysql/data:/var/lib/mysql \
     -v /opt/mysql/logs:/var/log/mysql \
-    -v /opt/mysql/my.cnf:/etc/mysql/my.cnf \
     -e MYSQL_ROOT_PASSWORD=123456 -d mysql
     ```
