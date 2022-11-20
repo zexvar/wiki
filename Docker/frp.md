@@ -1,14 +1,14 @@
 ---
-title: Docker部署frp内网穿透服务
+title: Docker frp 内网穿透服务
 description: 
-published: 1
-date: 2022-09-05T17:10:33.847Z
+published: true
+date: 2022-11-20T12:39:27.238Z
 tags: docker, frp
 editor: markdown
-dateCreated: 2022-09-05T17:06:08.664Z
+dateCreated: 2022-11-04T13:20:21.739Z
 ---
 
-### 1.部署frp服务端
+## 部署frp服务端
 
 * 创建frps.ini配置文件
 
@@ -38,7 +38,7 @@ dateCreated: 2022-09-05T17:06:08.664Z
     docker run --restart=always --network host -d -v /etc/frp/frps.ini:/etc/frp/frps.ini --name frps snowdreamtech/frps
     ```
 
-### 2.部署frp客户端
+## 部署frp客户端
 
 * 创建frpc.ini配置文件
 
