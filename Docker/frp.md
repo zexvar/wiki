@@ -1,8 +1,8 @@
 ---
-title: Docker frp 内网穿透服务
+title: Docker Frp 内网穿透
 description: 
 published: true
-date: 2022-11-20T12:39:27.238Z
+date: 2022-12-05T13:17:12.116Z
 tags: docker, frp
 editor: markdown
 dateCreated: 2022-11-04T13:20:21.739Z
@@ -13,8 +13,8 @@ dateCreated: 2022-11-04T13:20:21.739Z
 * 创建frps.ini配置文件
 
     ```bash
-    mkdir -p /etc/frp
-    vim /etc/frp/frps.ini
+    mkdir -p /opt/frp
+    vim /opt/frp/frps.ini
     ```
 
 * 文件内容如下
@@ -35,7 +35,7 @@ dateCreated: 2022-11-04T13:20:21.739Z
 * 运行容器
 
     ```bash
-    docker run --restart=always --network host -d -v /etc/frp/frps.ini:/etc/frp/frps.ini --name frps snowdreamtech/frps
+    docker run --restart=always --network host -d -v /opt/frp/frps.ini:/etc/frp/frps.ini --name frps snowdreamtech/frps
     ```
 
 ## 部署frp客户端
@@ -43,8 +43,8 @@ dateCreated: 2022-11-04T13:20:21.739Z
 * 创建frpc.ini配置文件
 
     ```bash
-    mkdir -p /etc/frp
-    vim /etc/frp/frpc.ini
+    mkdir -p /op/frp
+    vim /opt/frp/frpc.ini
     ```
 
 * 文件内容如下
@@ -71,11 +71,11 @@ dateCreated: 2022-11-04T13:20:21.739Z
 * 运行容器
 
     ```bash
-    docker run --restart=always --network host -d -v /etc/frp/frpc.ini:/etc/frp/frpc.ini --name frpc snowdreamtech/frpc
+    docker run --restart=always --network host -d -v /opt/frp/frpc.ini:/etc/frp/frpc.ini --name frpc snowdreamtech/frpc
     ```
 
-### 3.查看服务状态
+### 查看服务状态
 
 * 进入frp控制台
-    访问 frp server 地址 + 端口号7500
+    访问 frp 服务端地址 + 端口号7500
 * 输入密码后在 HTTP 和 HTTPS 目录中查看客户端状态
