@@ -1,8 +1,8 @@
 ---
-title: Ubuntu Gdm 设置root用户自动登录
+title: Ubuntu GDM 设置root用户自动登录
 description: 
 published: true
-date: 2022-12-09T14:01:51.892Z
+date: 2022-12-09T14:02:30.955Z
 tags: 
 editor: markdown
 dateCreated: 2022-12-09T14:01:51.892Z
