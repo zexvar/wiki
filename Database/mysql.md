@@ -1,8 +1,8 @@
 ---
-title: Mysql 数据库部署
+title: MySQL 数据库部署
 description: 
 published: true
-date: 2022-12-15T10:08:30.715Z
+date: 2022-12-15T10:10:22.787Z
 tags: docker, mysql
 editor: markdown
 dateCreated: 2022-11-04T13:20:07.870Z
@@ -21,9 +21,8 @@ dateCreated: 2022-11-04T13:20:07.870Z
     mkdir -p /opt/mysql/logs/
     mkdir -p /opt/mysql/data/
     ```
-* 创建my.cnf配置文件 添加以下内容: 
-  vim /opt/mysql/my.cnf
- 
+* 创建my.cnf配置文件`vim /opt/mysql/my.cnf`  
+* 添加以下内容
     ```ini
     [mysqld]
     skip-name-resolve
