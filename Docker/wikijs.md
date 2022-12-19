@@ -1,8 +1,8 @@
 ---
-title: Docker Wiki.js 个人wiki知识库部署
+title: Docker Wikijs 个人维基知识库部署
 description: 
 published: true
-date: 2022-12-19T05:43:51.389Z
+date: 2022-12-19T05:45:58.794Z
 tags: docker
 editor: markdown
 dateCreated: 2022-12-19T05:43:51.389Z
