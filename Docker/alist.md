@@ -2,7 +2,7 @@
 title: Docker Alist 聚合云盘部署
 description: 
 published: true
-date: 2022-11-25T13:52:24.832Z
+date: 2023-01-02T08:04:09.400Z
 tags: cloud, docker
 editor: markdown
 dateCreated: 2022-11-04T13:20:13.439Z
@@ -16,9 +16,9 @@ dateCreated: 2022-11-04T13:20:13.439Z
 * 启动容器
     ```bash
     docker run -d --restart=always \
-      -p 5244:5244 --name="alist" \
-      -v /opt/alist/data:/opt/alist/data \
-      xhofe/alist:main
+    -p 5244:5244 --name="alist" \
+    -v /opt/alist/data:/opt/alist/data \
+    xhofe/alist:latest
     ```
 * 查看密码
     ```bash
@@ -29,15 +29,15 @@ dateCreated: 2022-11-04T13:20:13.439Z
 * 创建目录
     ```bash
     mkdir -p /opt/alist/data
-    mkdir -p /opt/alist/storage
+    # 此处挂载路径为 /mnt/alist
     ```
 * 启动容器
     ```bash
     docker run -d --restart=always \
-      -p 5244:5244 --name="alist" \
-      -v /opt/alist/data:/opt/alist/data \
-      -v /opt/alist/storage:/opt/alist/storage \
-      xhofe/alist:main
+    -p 5244:5244 --name="alist" \
+    -v /opt/alist/data:/opt/alist/data \
+    -v /mnt/alist:/opt/alist/storage \
+    xhofe/alist:latest
     ```
 * 查看密码
     ```bash
