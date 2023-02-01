@@ -2,7 +2,7 @@
 title: Windows 基本设置优化
 description: 
 published: true
-date: 2023-01-31T13:29:19.411Z
+date: 2023-02-01T14:58:47.296Z
 tags: windows
 editor: markdown
 dateCreated: 2022-11-20T13:14:39.742Z
@@ -54,3 +54,19 @@ winget install vim.vim
 控制面板-> 硬件和声音-> 电源选项-> 选择电源按钮的功能 -> 更改当前不可用的设置
 ```
 * 勾选`休眠选项`
+
+## win下配置curl和wget
+
+* 设置powershell profile删除系统自带别名
+
+```bash
+# C:\Windows\System32\WindowsPowerShell\v1.0
+del alias:curl
+del alias:wget
+```
+* 通过winget安装curl和wget
+
+```bash
+winget install cURL.cURL
+winget install JernejSimoncic.Wget
+```
