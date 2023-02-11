@@ -1,22 +1,30 @@
 ---
-title: Docker watchtower升级容器
+title: Docker Watchtower 更新容器
 description: 
-published: 1
-date: 2022-10-21T18:20:20.612Z
-tags: docker, watchtower, upgrade
+published: true
+date: 2023-02-11T13:24:07.214Z
+tags: docker, upgrade, watchtower
 editor: markdown
-dateCreated: 2022-08-24T19:45:45.599Z
+dateCreated: 2022-11-04T13:20:27.400Z
 ---
 
-### Docker升级容器
+## 更新所有容器
 
-1. 通过watchtower升级container:
+```bash
+docker run --rm \
+-v /var/run/docker.sock:/var/run/docker.sock \
+containrrr/watchtower \
+--run-once -c
+```
+* -c 升级后删除旧的docker镜像
 
-   ```bash
-    docker run --rm \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    containrrr/watchtower \
-    --run-once -c container_name
-   ```
-   * -c 升级后删除旧的docker镜像
-   * container_name 为需要被升级的容器名
+## 指定容器名进行更新
+
+```bash
+docker run --rm \
+-v /var/run/docker.sock:/var/run/docker.sock \
+containrrr/watchtower \
+--run-once -c container_name
+```
+* -c 升级后删除旧的docker镜像
+* container_name 为需要被升级的容器名
