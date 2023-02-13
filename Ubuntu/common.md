@@ -2,19 +2,11 @@
 title: Ubuntu 常用设置
 description: 
 published: true
-date: 2023-02-13T11:06:07.770Z
+date: 2023-02-13T17:40:39.609Z
 tags: ubuntu
 editor: markdown
 dateCreated: 2022-11-04T13:20:38.549Z
 ---
-
-## 安装 SSHD 服务
-
-```bash
-sudo apt install openssh-server
-# sudo vim /etc/ssh/sshd_config       # PermitRootLogin yes
-sudo systemctl restart sshd
-```
 
 ## 设置环境变量
 * 以anaconda为例
