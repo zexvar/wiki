@@ -2,7 +2,7 @@
 title: Ubuntu 常用设置
 description: 
 published: true
-date: 2022-11-25T14:03:56.841Z
+date: 2023-02-13T11:06:07.770Z
 tags: ubuntu
 editor: markdown
 dateCreated: 2022-11-04T13:20:38.549Z
@@ -27,6 +27,7 @@ export PATH=$PATH:/usr/local/anaconda3/bin
 ```bash
 sudo dpkg-reconfigure tzdata
 ```
+
 ## SSH免密登录
 * 在客户机生产密钥对 (id_rsa, id_rsa.pub)
 ```bash
@@ -50,7 +51,12 @@ chmod 600 authorized_keys
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 150
 ```
 
-## 关闭anaconda base环境
+## 安装Docker
+```bash
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+```
+
+## 关闭Conda base环境
 
 ```bash
 conda config --set auto_activate_base false
