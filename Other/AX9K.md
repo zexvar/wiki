@@ -2,7 +2,7 @@
 title: AX9000 刷入 OpenWrt
 description: 
 published: true
-date: 2023-05-05T05:35:07.829Z
+date: 2023-05-05T05:37:39.842Z
 tags: openwrt
 editor: markdown
 dateCreated: 2022-12-31T13:14:37.050Z
@@ -42,20 +42,29 @@ reboot
 
 ## 刷入底包
 
-上传底包到`/tmp`目录
-将底包刷入分区 1 并设置从分区 1 启动
+通过SSH将底包上传到`/tmp`目录
 
+当前分区为flag为0
 ```bash
-ubiformat /dev/mtd22 -y -f /tmp/底包.ubi
+ubiformat /dev/mtd22 -y -f /tmp/openwrt-xxxx-factory.ubi
 nvram set flag_last_success=1
 nvram set flag_boot_rootfs=1
 nvram commit
 reboot
 ```
 
+当前分区为flag为1
+```bash
+ubiformat /dev/mtd21 -y -f /tmp/openwrt-xxxx-factory.ubi
+nvram set flag_last_success=0
+nvram set flag_boot_rootfs=0
+nvram commit
+reboot
+```
+
 ## 升级系统
 
-路由器重启后通过 openwrt 升级界面刷入最新系统
+路由器重启后通过 Openwrt 升级界面刷入最新系统
 
 ## 切换为原系统
 
