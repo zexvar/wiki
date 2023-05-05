@@ -1,8 +1,8 @@
 ---
-title: AX9000 刷入 OpenWrt
+title: AX9K 刷入 OpenWrt
 description: 
 published: true
-date: 2023-05-05T05:37:39.842Z
+date: 2023-05-05T05:38:04.331Z
 tags: openwrt
 editor: markdown
 dateCreated: 2022-12-31T13:14:37.050Z
