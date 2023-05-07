@@ -2,7 +2,7 @@
 title: AX9K 刷入 OpenWrt
 description: 
 published: true
-date: 2023-05-05T05:38:04.331Z
+date: 2023-05-07T05:21:05.467Z
 tags: openwrt
 editor: markdown
 dateCreated: 2022-12-31T13:14:37.050Z
