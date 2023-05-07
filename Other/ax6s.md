@@ -2,7 +2,7 @@
 title: AX6S 刷入 OpenWrt
 description: 
 published: true
-date: 2023-05-07T05:18:30.829Z
+date: 2023-05-07T05:19:06.918Z
 tags: openwrt
 editor: markdown
 dateCreated: 2023-01-01T08:28:35.519Z
