@@ -1,8 +1,8 @@
 ---
-title: Docker Alist 聚合云盘部署
+title: Alist 聚合云盘部署
 description: 
 published: true
-date: 2023-01-02T08:04:09.400Z
+date: 2023-05-08T03:12:12.835Z
 tags: cloud, docker
 editor: markdown
 dateCreated: 2022-11-04T13:20:13.439Z
