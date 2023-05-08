@@ -1,9 +1,9 @@
 ---
-title: Docker Filebrowser 轻量文件服务器
+title: Filebrowser 轻量网盘列表工具
 description: 
 published: true
-date: 2023-02-13T15:40:16.204Z
-tags: docker
+date: 2023-05-08T03:15:17.029Z
+tags: cloud, docker
 editor: markdown
 dateCreated: 2023-02-13T15:40:16.204Z
 ---
