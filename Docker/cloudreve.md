@@ -1,8 +1,8 @@
 ---
-title: Docker Cloudreve 云盘部署
+title: Cloudreve 云盘部署
 description: 
 published: true
-date: 2022-11-20T12:38:12.152Z
+date: 2023-05-08T03:13:13.228Z
 tags: cloud, docker
 editor: markdown
 dateCreated: 2022-11-04T13:20:18.998Z
@@ -37,7 +37,7 @@ Charset = utf8
 ## 启动容器
 ```bash
 docker run -d --restart=always --privileged=true \
--p 80:5212 --name cloudreve \
+-p 5212:5212 --name cloudreve \
 --mount type=bind,source=/opt/cloudreve/conf.ini,target=/cloudreve/conf.ini \
 -v /opt/cloudreve/uploads:/cloudreve/uploads \
 -v /opt/cloudreve/avatar:/cloudreve/avatar \
