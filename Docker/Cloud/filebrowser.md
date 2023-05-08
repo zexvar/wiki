@@ -1,8 +1,8 @@
 ---
-title: Filebrowser 轻量网盘列表工具
+title: Filebrowser 轻量云盘列表工具
 description: 
 published: true
-date: 2023-05-08T03:15:17.029Z
+date: 2023-05-08T03:15:40.780Z
 tags: cloud, docker
 editor: markdown
 dateCreated: 2023-02-13T15:40:16.204Z
