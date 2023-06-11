@@ -9,7 +9,7 @@ hide:
     <div class="container animate__animated animate__fadeInLeft">
         <div class="row align-items-center">
             <div class="col-sm-8" align="center">
-                <p style="font-size:48px;">Welcome to my docs!</p>
+                <p style="font-size:48px;">Welcome to here!</p>
                 <p>Ctrl+C and Ctrl+V is the best invention all over the world!</p>
             </div>
             <div class="col-sm-4">

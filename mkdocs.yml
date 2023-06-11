@@ -1,5 +1,5 @@
-site_name: wiki
-site_description: docs
+site_name: Wiki
+site_description: wiki
 repo_url: https://github.com/DaiCae/wiki
 edit_uri: edit/main/docs/
 copyright: Copyright &copy; 2023 DaiCae, All rights reserved.
