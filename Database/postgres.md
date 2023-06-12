@@ -29,9 +29,3 @@ dateCreated: 2022-12-04T09:39:51.594Z
     -v /opt/postgres/data:/var/lib/postgresql/data \
     postgres
   ```
-
-    docker run -d --restart=always --name postgres \
-    -p 5432:5432 \
-    -e POSTGRES_PASSWORD=***REMOVED*** \
-    -v /opt/postgres/data:/var/lib/postgresql/data \
-    postgres
