@@ -6,7 +6,7 @@ copyright: Copyright &copy; 2023 DaiCae, All rights reserved.
 
 theme:
   name: material
-  favicon: blob/favicon.ico
+  favicon: blob/favicon.png
   # logo: blob/images/logo.png
   features:
     - navigation.instant
