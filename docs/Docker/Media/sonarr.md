@@ -3,13 +3,17 @@ title: Sonarr 电视剧整理
 ---
 
 ## 准备工作
+
 创建目录
+
 ```bash
 mkdir -p /opt/sonarr/config
 ```
 
 ## 启动容器
+
 /mnt/down 为挂载的媒体文件位置
+
 ```bash
 docker run -d \
 --name=sonarr \

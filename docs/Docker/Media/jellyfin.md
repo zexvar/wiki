@@ -1,17 +1,19 @@
 ---
 title: Jellyfin 影音服务器
 ---
+
 ## 镜像信息
-使用镜像为 `linuxserver/jellyfin` 
+
+使用镜像为 `linuxserver/jellyfin`
 
 镜像硬件加速支持: `Intel` `Nvidia` ...
 
 [Docker hub 链接](https://hub.docker.com/r/linuxserver/jellyfin)
 
-
 ## 硬件加速
+
 安装 NVIDIA Container Toolkit
-NVIDIA Container Toolkit 能够为容器使用Nvidia GPU加速提供支持
+NVIDIA Container Toolkit 能够为容器使用 Nvidia GPU 加速提供支持
 
 ```bash
 # 检查安装状态
@@ -19,6 +21,7 @@ docker run --rm --gpus all nvidia/cuda:11.4.3-base-ubuntu20.04 nvidia-smi
 ```
 
 ## 运行容器
+
 ```bash
 docker run -d \
 --name=jellyfin \

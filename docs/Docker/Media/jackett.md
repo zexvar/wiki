@@ -4,7 +4,7 @@ title: Jackett 索引器
 
 ## 启动容器
 
-使用linuxserver提供的镜像
+使用 linuxserver 提供的镜像
 
 ```bash
 docker run -d \

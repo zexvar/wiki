@@ -10,7 +10,8 @@ docker run --rm \
 containrrr/watchtower \
 --run-once -c
 ```
-* -c 升级后删除旧的docker镜像
+
+- -c 升级后删除旧的 docker 镜像
 
 ## 指定容器名进行更新
 
@@ -20,5 +21,6 @@ docker run --rm \
 containrrr/watchtower \
 --run-once -c container_name
 ```
-* -c 升级后删除旧的docker镜像
-* container_name 为需要被升级的容器名
+
+- -c 升级后删除旧的 docker 镜像
+- container_name 为需要被升级的容器名

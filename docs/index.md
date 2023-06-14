@@ -1,10 +1,11 @@
 ---
 title: Welcome
-description: 
+description:
 hide:
   - navigation
 #   - toc
 ---
+
 <section class="bg-red">
     <div class="container animate__animated animate__fadeInLeft">
         <div class="row align-items-center">
@@ -40,8 +41,6 @@ hide:
         </div>
     </div>
 </section>
-
-
 
 <style>
   .bg-red {
