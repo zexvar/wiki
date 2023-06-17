@@ -1,6 +1,4 @@
----
-title: ESXI 直通NVIDIA显卡
----
+# ESXI 直通 NVIDIA 显卡
 
 ## 设置 ESXI:
 

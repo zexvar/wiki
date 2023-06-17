@@ -1,9 +1,7 @@
 ---
-title: Welcome
-description:
 hide:
   - navigation
-#   - toc
+  - toc
 ---
 
 <section class="bg-red">

@@ -1,6 +1,4 @@
----
-title: Jackett 索引器
----
+# Jackett 索引器
 
 ## 启动容器
 

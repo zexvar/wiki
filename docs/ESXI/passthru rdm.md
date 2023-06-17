@@ -1,6 +1,4 @@
----
-title: ESXI RDM磁盘直通
----
+# ESXI RDM 磁盘直通
 
 ## 设置 RDM 直通
 

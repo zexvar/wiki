@@ -1,6 +1,4 @@
----
-title: PostgreSQL 数据库
----
+# PostgreSQL 数据库
 
 ## 快速部署
 

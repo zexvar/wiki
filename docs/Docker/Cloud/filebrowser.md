@@ -1,6 +1,4 @@
----
-title: Filerowser 轻量网盘
----
+# Filerowser 轻量网盘
 
 ## 准备工作
 

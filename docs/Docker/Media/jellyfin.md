@@ -1,6 +1,4 @@
----
-title: Jellyfin 影音服务器
----
+# Jellyfin 影音服务器
 
 ## 镜像信息
 

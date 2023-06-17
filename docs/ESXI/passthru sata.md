@@ -1,6 +1,4 @@
----
-title: ESXI SATA控制器直通
----
+# ESXI SATA 控制器直通
 
 ## 直通起因
 
