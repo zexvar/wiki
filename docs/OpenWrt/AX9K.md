@@ -1,12 +1,4 @@
----
-title: AX9K 刷入 OpenWrt
-description: 
-published: true
-date: 2023-05-07T05:21:05.467Z
-tags: openwrt
-editor: markdown
-dateCreated: 2022-12-31T13:14:37.050Z
----
+# AX9K 刷入 OpenWrt
 
 ## 解锁 SSH
 
@@ -18,6 +10,12 @@ sed -i 's/channel=.*/channel="debug"/g' /etc/init.d/dropbear
 /etc/init.d/dropbear start
 echo -e 'admin\nadmin' | passwd root
 ```
+
+## 无线网络问题
+
+5.2G 网络无法连接
+
+[解决方案](https://openwrt.org/toh/xiaomi/ax9000#potential_issueslimitations)
 
 ## 确定当前使用分区
 
@@ -39,12 +37,12 @@ nvram commit
 reboot
 ```
 
-
 ## 刷入底包
 
-通过SSH将底包上传到`/tmp`目录
+通过 SSH 将底包上传到`/tmp`目录
 
-当前分区为flag为0
+当前分区为 flag 为 0
+
 ```bash
 ubiformat /dev/mtd22 -y -f /tmp/openwrt-xxxx-factory.ubi
 nvram set flag_last_success=1
@@ -53,7 +51,8 @@ nvram commit
 reboot
 ```
 
-当前分区为flag为1
+当前分区为 flag 为 1
+
 ```bash
 ubiformat /dev/mtd21 -y -f /tmp/openwrt-xxxx-factory.ubi
 nvram set flag_last_success=0
