@@ -7,7 +7,6 @@ copyright: Copyright &copy; 2023 DaiCae, All rights reserved.
 theme:
   name: material
   favicon: blob/favicon.png
-  # logo: blob/images/logo.png
   features:
     - navigation.instant
     - navigation.tracking
@@ -16,24 +15,21 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.footer
-    - navigation.expand
-    # - navigation.path
-    # - navigation.prune
+    - navigation.prune
     - header.autohide
-    - toc.integrate
     - toc.follow
     - content.code.copy
     - content.action.edit
     - content.action.view
-  palette: 
+  palette:
     # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/?h=palette#primary-color
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: black 
-      accent: deep purple
+      primary: light green
+      accent: lime
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
@@ -80,10 +76,9 @@ extra:
   version:
     provider: mike
   social:
-    - icon: fontawesome/brands/github 
+    - icon: fontawesome/brands/github
       link: https://github.com/DaiCae
 
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - javascripts/tablesort.js
-
