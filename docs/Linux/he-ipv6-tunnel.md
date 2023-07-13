@@ -8,7 +8,7 @@
 
 在 Tunnel Broker 官网注册账号
 
-- [HE Tunnel Broker 官网](https://tunnelbroker.net/)
+-   [HE Tunnel Broker 官网](https://tunnelbroker.net/)
 
 登录账号并创建隧道,点击 `Create Regular Tunnel` 按钮.
 
@@ -21,6 +21,8 @@
 在 `Example Configurations` 中选择对应的操作系统
 
 将显示的网络配置内容添加到主机中
+
+NAT 后的主机需要填写内网 ip 而非公网 ip
 
 重启主机 `reboot`
 
