@@ -17,7 +17,7 @@ docker run -d \
 -p 8080:8080 \
 -p 6881:6881 \
 -p 6881:6881/udp \
--v /opt/qbittorrent/config:/config \
+-v /opt/qbittorrent/:/config \
 -v /mnt/down:/downloads \
 --restart always \
 lscr.io/linuxserver/qbittorrent:latest
@@ -35,7 +35,7 @@ docker run -d \
 -e PGID=0 \
 -e TZ=Asian/Shanghai \
 -e WEBUI_PORT=8080 \
--v /opt/qbittorrent/config:/config \
+-v /opt/qbittorrent/:/config \
 -v /mnt/down:/downloads \
 --restart=always \
 lscr.io/linuxserver/qbittorrent:latest
