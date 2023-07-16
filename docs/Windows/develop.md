@@ -12,8 +12,12 @@
 
 ## 常用工具下载
 
-- git `winget install Git.Git`
 - vim `winget install vim.vim`
+- git `winget install Git.Git --interactive`
+
+vim 安装完成后需要手动设置环境变量
+
+添加 `--interactive` 参数可以完全控制安装过程
 
 ## win 下配置 curl 和 wget
 
