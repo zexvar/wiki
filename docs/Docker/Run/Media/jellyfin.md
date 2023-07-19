@@ -27,7 +27,7 @@ docker run -d \
 -e PUID=0 \
 -p 8096:8096 \
 -v /opt/jellyfin/config:/config \
--v /mnt/down/media:/media \
+-v /mnt/down/:/downloads \
 --restart=always \
 --runtime=nvidia \
 -e NVIDIA_VISIBLE_DEVICES=all \
