@@ -26,6 +26,22 @@
         deploy:
           mode: global
 
+      vmware_exporter:
+        image: pryorda/vmware_exporter
+        networks:
+          - exporter_network
+        ports:
+          - 9272:9272
+        environment:
+          - VSPHERE_USER=${VSPHERE_USERNAME}
+          - VSPHERE_PASSWORD=${VSPHERE_PASSWORD}
+          - VSPHERE_HOST=${VSPHERE_HOST}
+          - VSPHERE_IGNORE_SSL=True
+          - VSPHERE_SPECS_SIZE=2000
+        deploy:
+          mode: replicated
+          replicas: 1
+
       prometheus:
         image: prom/prometheus
         user: root
@@ -124,6 +140,14 @@
           - 'tasks.cadvisor'
           type: 'A'
           port: 8080
+
+      - job_name: 'vmware_exporter'
+        metrics_path: '/metrics'
+        dns_sd_configs:
+        - names:
+          - 'tasks.vmware_exporter'
+          type: 'A'
+          port: 9272
     ```
 
 ## 部署运行
@@ -133,5 +157,8 @@
 可从 [Github Releases](https://github.com/google/cadvisor/releases) 下载
 
 ```bash
+export VSPHERE_USER=root
+export VSPHERE_PASSWORD=123456
+export VSPHERE_HOST=10.0.0.100
 docker stack deploy -c monitor-stack.yml monitor
 ```

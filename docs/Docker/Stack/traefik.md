@@ -4,7 +4,7 @@
 
 创建配置文件
 
-```yaml title='traefik-stack.yml'
+```yaml title='proxy-stack.yml'
 version: "3.9"
 
 services:
@@ -56,5 +56,5 @@ networks:
 
 ```bash
 export BASIC_AUTH=$(htpasswd -nB admin)
-docker stack deploy -c traefik-stack.yml traefik
+docker stack deploy -c proxy-stack.yml proxy
 ```
