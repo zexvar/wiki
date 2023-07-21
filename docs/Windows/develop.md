@@ -17,6 +17,12 @@
 
 vim 安装完成后需要手动设置环境变量
 
+```shell
+# 为 git 设置代理
+git config --global http.proxy socks5://127.0.0.1:10808
+git config --global https.proxy socks5://127.0.0.1:10808
+```
+
 添加 `--interactive` 参数可以完全控制安装过程
 
 ## win 下配置 curl 和 wget
