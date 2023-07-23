@@ -11,7 +11,8 @@
 
     services:
       cadvisor:
-        image: gcr.io/cadvisor/cadvisor
+        # image: gcr.io/cadvisor/cadvisor
+        image: gcr.dockerproxy.com/cadvisor/cadvisor
         networks:
           - exporter_network
         volumes:
@@ -23,6 +24,7 @@
           - /dev/disk/:/dev/disk:ro
         command:
           - --docker_only=true
+          - --disable_metrics=advtcp,sched,cpu_topology,resctrl,memory_numa,tcp,hugetlb,referenced_memory,udp,process,accelerator,disk,diskIO,percpu
         deploy:
           mode: global
 
@@ -48,8 +50,6 @@
         networks:
           - exporter_network
           - proxy_network
-        # ports:
-        #   - 9090:9090
         volumes:
           - prometheus_data:/prometheus
         command:
@@ -71,17 +71,13 @@
         networks:
           - exporter_network
           - proxy_network
-        # ports:
-        #   - 3000:3000
         volumes:
           - grafana_data:/var/lib/grafana
         environment:
           - GF_AUTH_ANONYMOUS_ENABLED=true
         deploy:
           mode: replicated
-          replicas: 2
-          # placement:
-          #   constraints: [node.role == manager]
+          replicas: 1
           labels:
             - traefik.enable=true
             - traefik.http.routers.grafana.entryPoints=web
@@ -155,6 +151,7 @@
 !!! info "cadvisor 镜像仓库不能直接访问"
 
 可从 [Github Releases](https://github.com/google/cadvisor/releases) 下载
+或从 dockerproxy 提供的镜像网站获取cadvisor
 
 ```bash
 export VSPHERE_USER=root
