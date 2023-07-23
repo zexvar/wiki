@@ -19,7 +19,7 @@ docker run -d \
 -e PGID=0 \
 -e TZ=Asia/Shanghai \
 -p 8989:8989 \
--v /opt/sonarr/config:/config \
+-v /opt/sonarr/:/config \
 -v /mnt/down:/downloads \
 --restart always \
 lscr.io/linuxserver/sonarr:latest

@@ -19,7 +19,7 @@ docker run -d \
 -e PGID=0 \
 -e TZ=Asia/Shanghai \
 -p 7878:7878 \
--v /opt/radarr/config:/config \
+-v /opt/radarr/:/config \
 -v /mnt/down:/downloads \
 --restart always \
 lscr.io/linuxserver/radarr:latest

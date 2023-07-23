@@ -9,7 +9,7 @@ docker run -d \
 --name=jackett \
 -e AUTO_UPDATE=true \
 -p 9117:9117 \
--v /opt/jackett/config:/config \
+-v /opt/jackett/:/config \
 --restart always \
 lscr.io/linuxserver/jackett:latest
 ```

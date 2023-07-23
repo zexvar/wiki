@@ -32,8 +32,6 @@
         image: pryorda/vmware_exporter
         networks:
           - exporter_network
-        ports:
-          - 9272:9272
         environment:
           - VSPHERE_USER=${VSPHERE_USERNAME}
           - VSPHERE_PASSWORD=${VSPHERE_PASSWORD}

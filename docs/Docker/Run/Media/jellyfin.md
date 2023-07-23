@@ -26,7 +26,7 @@ docker run -d \
 -e PGID=0 \
 -e PUID=0 \
 -p 8096:8096 \
--v /opt/jellyfin/config:/config \
+-v /opt/jellyfin/:/config \
 -v /mnt/down/:/downloads \
 --restart=always \
 --runtime=nvidia \
