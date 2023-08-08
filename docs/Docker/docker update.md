@@ -25,8 +25,11 @@ containrrr/watchtower \
 修改 `docker-compose.yml` 镜像版本
 
 ```bash
-docker-compose down
-docker-compose up -d --build
+docker compose pull
+docker compose down
+docker compose up -d
+# clear old images
+docker image prune
 ```
 
 ## Docker stack
