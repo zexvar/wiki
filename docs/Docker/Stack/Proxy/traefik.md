@@ -11,13 +11,10 @@ services:
   traefik:
     image: traefik:latest
     networks:
-      - proxy_network
+      - proxy
     ports:
       - 80:80
       - 8080:8080
-      # - target: 443
-      #   published: 443
-      #   mode: host
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     command:
@@ -25,7 +22,7 @@ services:
       - --api.insecure=true
       - --metrics.prometheus=true
       - --entrypoints.web.address=:80
-      - --providers.docker.network=proxy_network
+      - --providers.docker.network=proxy
       - --providers.docker.swarmMode=true
       - --providers.docker.exposedbydefault=false
       - --providers.docker.endpoint=unix:///var/run/docker.sock
@@ -42,13 +39,12 @@ services:
         - traefik.http.routers.traefik-auth.middlewares=auth
         - traefik.http.middlewares.auth.basicauth.users=${BASIC_AUTH}
 networks:
-  proxy_network:
+  proxy:
     external: true
 
 ```
 
 ## 部署运行
-
 
 生成密码 : `echo $(htpasswd -nB admin)`
 
