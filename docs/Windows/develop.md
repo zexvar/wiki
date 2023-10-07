@@ -1,5 +1,14 @@
 # Windows 开发环境设置
 
+## WinGet 换源
+
+```shell
+winget source remove winget
+winget source add winget https://mirrors.ustc.edu.cn/winget-source
+```
+
+恢复默认源`winget source reset winget`
+
 ## 常见 SDK 下载
 
 通过 winget 包管理器一键配置
