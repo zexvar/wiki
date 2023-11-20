@@ -1,9 +1,4 @@
-# Download 下载服务
-
-## 服务组成
-
-* `qbittorrent`
-* `aria2-pro`
+# 媒体下载服务
 
 ## 配置文件
 
