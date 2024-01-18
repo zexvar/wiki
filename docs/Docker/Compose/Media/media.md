@@ -2,7 +2,7 @@
 
 ## 配置文件
 
-```yaml title='docker-compose.yml'
+```yml title='docker-compose.yml'
 version: "3.9"
 
 services:
@@ -10,7 +10,7 @@ services:
     image: flaresolverr/flaresolverr:latest
     container_name: flaresolverr
     networks:
-      - proxy
+      - main
     labels:
       - traefik.enable=true
       - traefik.http.routers.flaresolver.entryPoints=web
@@ -22,7 +22,7 @@ services:
     image: linuxserver/jackett:latest
     container_name: jackett
     networks:
-      - proxy
+      - main
     volumes:
       - ./data/jackett:/config
     environment:
@@ -39,7 +39,7 @@ services:
     image: linuxserver/prowlarr:latest
     container_name: prowlarr
     networks:
-      - proxy
+      - main
     volumes:
       - ./data/prowlarr:/config
     environment:
@@ -57,7 +57,7 @@ services:
     image: linuxserver/radarr:latest
     container_name: radarr
     networks:
-      - proxy
+      - main
     volumes:
       - ./data/radarr:/config
       - downloads_data:/downloads
@@ -76,7 +76,7 @@ services:
     image: linuxserver/sonarr:latest
     container_name: sonarr
     networks:
-      - proxy
+      - main
     volumes:
       - ./data/sonarr:/config
       - downloads_data:/downloads
@@ -92,7 +92,7 @@ services:
     restart: always
 
 networks:
-  proxy:
+  main:
     external: true
 
 volumes:
