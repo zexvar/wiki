@@ -1,8 +1,8 @@
-# Gateway 网关服务
+# Nginx 网关入口
 
 ## 服务组成
 
-- `nginx` 负责反向代理作为网管入口
+- `nginx` 负责反向代理作为网关入口
 - `acme` 负责生成和更新 SSL 证书
 
 ## 配置文件
@@ -11,7 +11,7 @@
 version: "3.9"
 services:
   nginx:
-    image: nginx:latest
+    image: nginx
     container_name: nginx
     network_mode: host
     volumes:
@@ -22,7 +22,7 @@ services:
     restart: always
 
   acme:
-    image: neilpang/acme.sh:latest
+    image: neilpang/acme.sh
     container_name: acme
     network_mode: host
     volumes:
