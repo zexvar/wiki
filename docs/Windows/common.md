@@ -10,7 +10,7 @@ slmgr.vbs /upk
 # 安装WIN10专业版密钥
 slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
 # 设置激活服务器
-slmgr /skms kms.zoxe.top
+slmgr /skms www.zoxe.top
 # 激活系统
 slmgr /ato
 ```
