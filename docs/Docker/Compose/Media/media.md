@@ -7,7 +7,7 @@ version: "3.9"
 
 services:
   flaresolverr:
-    image: flaresolverr/flaresolverr:latest
+    image: flaresolverr/flaresolverr
     container_name: flaresolverr
     networks:
       - main
@@ -19,7 +19,7 @@ services:
     restart: always
 
   jackett:
-    image: linuxserver/jackett:latest
+    image: linuxserver/jackett
     container_name: jackett
     networks:
       - main
@@ -27,7 +27,6 @@ services:
       - ./data/jackett:/config
     environment:
       - TZ=Asia/Shanghai
-      - AUTO_UPDATE=true
     labels:
       - traefik.enable=true
       - traefik.http.routers.jackett.entryPoints=web
@@ -36,15 +35,13 @@ services:
     restart: always
 
   prowlarr:
-    image: linuxserver/prowlarr:latest
+    image: linuxserver/prowlarr
     container_name: prowlarr
     networks:
       - main
     volumes:
       - ./data/prowlarr:/config
     environment:
-      - PUID=0
-      - PGID=0
       - TZ=Asia/Shanghai
     labels:
       - traefik.enable=true
@@ -54,7 +51,7 @@ services:
     restart: always
 
   radarr:
-    image: linuxserver/radarr:latest
+    image: linuxserver/radarr
     container_name: radarr
     networks:
       - main
@@ -62,8 +59,6 @@ services:
       - ./data/radarr:/config
       - downloads_data:/downloads
     environment:
-      - PUID=0
-      - PGID=0
       - TZ=Asia/Shanghai
     labels:
       - traefik.enable=true
@@ -73,7 +68,7 @@ services:
     restart: always
 
   sonarr:
-    image: linuxserver/sonarr:latest
+    image: linuxserver/sonarr
     container_name: sonarr
     networks:
       - main
@@ -81,8 +76,6 @@ services:
       - ./data/sonarr:/config
       - downloads_data:/downloads
     environment:
-      - PUID=0
-      - PGID=0
       - TZ=Asia/Shanghai
     labels:
       - traefik.enable=true
