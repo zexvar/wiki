@@ -7,7 +7,7 @@ version: "3.9"
 
 services:
   qbittorrent:
-    image: lscr.io/linuxserver/qbittorrent:latest
+    image: linuxserver/qbittorrent:latest
     container_name: qbittorrent
     network_mode: host
     volumes:
