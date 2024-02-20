@@ -25,7 +25,7 @@ directory mask = 777
 
 ### 添加访问用户
 
-添加用户admin
+添加用户 admin
 
 ```bash
 useradd admin
@@ -50,11 +50,11 @@ service smbd restart    #重启
 
 ```bash
 mkdir /share
-mount //xx.xx.xx.xx/smb /smb -o username=admin,password=123456,uid=0,gid=0
+mount //10.0.0.30/smb /smb -o username=admin,password=123456,uid=0,gid=0
 ```
 
-### 开机自动挂载 
+### 开机自动挂载
 
 ```bash title="/etc/fstab"
-//xx.xx.xx.xx/smb /smb/ cifs defaults,username=admin,password=123456,uid=0,gid=0 0 0
+//10.0.0.30/smb /smb/ cifs defaults,username=admin,password=123456,uid=0,gid=0 0 0
 ```
