@@ -21,14 +21,14 @@ systemctl start nfs-server
 ```bash title="/etc/exports"
 /nfs 10.0.0.101(rw,sync,no_root_squash,no_subtree_check)
 /nfs 10.0.0.*(rw,sync,no_root_squash,no_subtree_check)
-/nfs 10.0.0.0/16(rw,sync,no_root_squash,no_subtree_check)
+/nfs 10.0.0.0/8(rw,sync,no_root_squash,no_subtree_check)
 ```
 
 配置文件中的权限
 
-* rw 允许读写
-* sync 文件同时写入硬盘和内存
-* no_subtree_check 即使输出目录是一个子目录,不检查其父目录的权限,这样可以提高效率
+- rw 允许读写
+- sync 文件同时写入硬盘和内存
+- no_subtree_check 即使输出目录是一个子目录,不检查其父目录的权限,这样可以提高效率
 
 ### 生效配置并检查
 
@@ -40,7 +40,7 @@ systemctl start nfs-server
 
 ### 安装 NFS 客户端
 
-``` bash
+```bash
 apt install nfs-common
 ```
 
@@ -48,9 +48,9 @@ apt install nfs-common
 
 客户端创建挂载点目录
 
-``` bash
+```bash
 mkdir -p /nfs-mount
-mount 10.0.0.100:/nfs /nfs-mount
+mount 10.0.0.30:/nfs /nfs-mount
 ```
 
 ### 开机自动挂载
@@ -61,7 +61,7 @@ mount 10.0.0.100:/nfs /nfs-mount
 
 ## 查看服务状态
 
-``` bash
+```bash
 nfsstat
 nfsstat -l
 ```
