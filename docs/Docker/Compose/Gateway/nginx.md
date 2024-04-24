@@ -10,7 +10,6 @@
 通过 ACME 环境变量设置,指定证书安装位置,并在证书更改后自动重启 nginx 服务,确保新证书被 nginx 使用.
 
 ```yml title='docker-compose.yml'
-version: "3.9"
 services:
   nginx:
     image: nginx
@@ -45,7 +44,6 @@ services:
 ## 手动配置服务
 
 ```yml title='docker-compose.yml'
-version: "3.9"
 services:
   nginx:
     image: nginx

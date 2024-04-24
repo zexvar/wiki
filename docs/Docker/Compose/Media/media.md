@@ -3,8 +3,6 @@
 ## 配置文件
 
 ```yml title='docker-compose.yml'
-version: "3.9"
-
 services:
   flaresolverr:
     image: flaresolverr/flaresolverr

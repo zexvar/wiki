@@ -8,12 +8,13 @@
 ## 配置文件
 
 ```yml
-cloudflared:
-  container_name: cloudflared
-  image: cloudflare/cloudflared
-  network_mode: host
-  command: tunnel --no-autoupdate --protocol auto run --token ******
-  restart: always
+services:
+  cloudflared:
+    container_name: cloudflared
+    image: cloudflare/cloudflared
+    network_mode: host
+    command: tunnel --no-autoupdate --protocol auto run --token ******
+    restart: always
 ```
 
 ## 注意事项

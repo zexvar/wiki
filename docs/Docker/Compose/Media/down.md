@@ -3,11 +3,9 @@
 ## 配置文件
 
 ```yml title='docker-compose.yml'
-version: "3.9"
-
 services:
   qbittorrent:
-    image: linuxserver/qbittorrent:latest
+    image: linuxserver/qbittorrent
     container_name: qbittorrent
     network_mode: host
     volumes:
