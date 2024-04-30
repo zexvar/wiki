@@ -11,8 +11,7 @@ services:
       - main
     labels:
       - traefik.enable=true
-      - traefik.http.routers.flaresolver.entryPoints=web
-      - traefik.http.routers.flaresolver.rule=HostRegexp(`{host:^flare.*}`)
+      - traefik.http.routers.flaresolver.rule=HostRegexp(`^flare.*`)
       - traefik.http.services.flaresolver.loadbalancer.server.port=8191
     restart: always
 
@@ -27,8 +26,7 @@ services:
       - TZ=Asia/Shanghai
     labels:
       - traefik.enable=true
-      - traefik.http.routers.jackett.entryPoints=web
-      - traefik.http.routers.jackett.rule=HostRegexp(`{host:^jackett.*}`)
+      - traefik.http.routers.jackett.rule=HostRegexp(`^jackett.*`)
       - traefik.http.services.jackett.loadbalancer.server.port=9117
     restart: always
 
@@ -43,8 +41,7 @@ services:
       - TZ=Asia/Shanghai
     labels:
       - traefik.enable=true
-      - traefik.http.routers.prowlarr.entryPoints=web
-      - traefik.http.routers.prowlarr.rule=HostRegexp(`{host:^prowlarr.*}`)
+      - traefik.http.routers.prowlarr.rule=HostRegexp(`^prowlarr.*`)
       - traefik.http.services.prowlarr.loadbalancer.server.port=9696
     restart: always
 
@@ -60,8 +57,7 @@ services:
       - TZ=Asia/Shanghai
     labels:
       - traefik.enable=true
-      - traefik.http.routers.radarr.entryPoints=web
-      - traefik.http.routers.radarr.rule=HostRegexp(`{host:^radarr.*}`)
+      - traefik.http.routers.radarr.rule=HostRegexp(`^radarr.*`)
       - traefik.http.services.radarr.loadbalancer.server.port=7878
     restart: always
 
@@ -77,8 +73,7 @@ services:
       - TZ=Asia/Shanghai
     labels:
       - traefik.enable=true
-      - traefik.http.routers.sonarr.entryPoints=web
-      - traefik.http.routers.sonarr.rule=HostRegexp(`{host:^sonarr.*}`)
+      - traefik.http.routers.sonarr.rule=HostRegexp(`^sonarr.*`)
       - traefik.http.services.sonarr.loadbalancer.server.port=8989
     restart: always
 
