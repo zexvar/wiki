@@ -18,17 +18,17 @@ RUN go install tailscale.com/cmd/derper@main
 
 FROM alpine
 WORKDIR /app
-ENV DERP_DOMAIN hostname.com
-ENV DERP_VERIFY_CLIENTS false
+ENV DERP_DOMAIN=hostname.com
+ENV DERP_VERIFY_CLIENTS=false
 COPY --from=builder /go/bin/derper .
-CMD /app/derper -hostname $DERP_DOMAIN -verify-clients=$DERP_VERIFY_CLIENTS
+CMD ["/app/derper", "-hostname", "$DERP_DOMAIN", "-verify-clients","$DERP_VERIFY_CLIENTS"]
 ```
 
 生成镜像 `docker build -t derp .`
 
 ## 安装 Tailscale
 
-安装 tailscale `url -fsSL <https://tailscale.com/install.sh> | sh`
+安装 tailscale `curl -fsSL https://tailscale.com/install.sh | sh`
 
 运行`tailscaled`
 
