@@ -24,20 +24,20 @@ theme:
   palette:
     # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/?h=palette#primary-color
     # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
+    - scheme: default
       primary: light green
       accent: lime
       toggle:
         icon: material/brightness-7
+        name: Switch to dark mode
 
     # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    - scheme: slate
       primary: lime
       accent: yellow
       toggle:
         icon: material/brightness-4
+        name: Switch to light mode
   icon:
     admonition:
       note: octicons/tag-16
