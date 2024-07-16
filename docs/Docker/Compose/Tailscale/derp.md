@@ -17,11 +17,8 @@ FROM golang:alpine AS builder
 RUN go install tailscale.com/cmd/derper@main
 
 FROM alpine
-WORKDIR /app
-ENV DERP_DOMAIN=hostname.com
-ENV DERP_VERIFY_CLIENTS=false
-COPY --from=builder /go/bin/derper .
-CMD ["/app/derper", "-hostname", "$DERP_DOMAIN", "-verify-clients","$DERP_VERIFY_CLIENTS"]
+COPY --from=builder /go/bin/derper /usr/bin/derper
+ENTRYPOINT ["derper"]
 ```
 
 生成镜像 `docker build -t derp .`
@@ -34,16 +31,14 @@ CMD ["/app/derper", "-hostname", "$DERP_DOMAIN", "-verify-clients","$DERP_VERIFY
 
 ## 配置文件
 
-```yaml title='docker-compose.yml'
+```yml title='docker-compose.yml'
 services:
   derp:
+    image: derp
     container_name: derp
     network_mode: host
-    image: derp
     volumes:
       - /var/run/tailscale/tailscaled.sock:/var/run/tailscale/tailscaled.sock
-    environment:
-      - DERP_VERIFY_CLIENTS=true
-      - DERP_DOMAIN=<DOMAIN_NAME>
+    command: "--hostname=<DOMAIN_NAME> --verify-clients"
     restart: always
 ```
