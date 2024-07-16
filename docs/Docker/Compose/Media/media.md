@@ -1,5 +1,15 @@
 # 媒体管理服务
 
+## 创建挂载卷
+
+```shell
+docker volume create --driver local \
+--opt type=nfs \
+--opt o=addr=10.0.0.30,rw,nfsvers=4 \
+--opt device=:/mnt/main/down \
+downloads
+```
+
 ## 配置文件
 
 ```yml title='docker-compose.yml'
@@ -52,7 +62,7 @@ services:
       - main
     volumes:
       - ./data/radarr:/config
-      - downloads_data:/downloads
+      - downloads:/downloads
     environment:
       - TZ=Asia/Shanghai
     labels:
@@ -68,7 +78,7 @@ services:
       - main
     volumes:
       - ./data/sonarr:/config
-      - downloads_data:/downloads
+      - downloads:/downloads
     environment:
       - TZ=Asia/Shanghai
     labels:
@@ -82,9 +92,6 @@ networks:
     external: true
 
 volumes:
-  downloads_data:
-    driver_opts:
-      type: nfs
-      o: addr=10.0.0.30,rw,nfsvers=4
-      device: :/mnt/main/down
+  downloads:
+    external: true
 ```
