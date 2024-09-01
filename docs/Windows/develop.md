@@ -1,6 +1,8 @@
 # Windows 开发环境设置
 
-## WinGet 换源
+## WinGet 常用设置
+
+### 换源
 
 ```shell
 winget source remove winget
@@ -9,7 +11,7 @@ winget source add winget https://mirrors.ustc.edu.cn/winget-source
 
 恢复默认源`winget source reset winget`
 
-## 常见 SDK 下载
+### 常见 SDK 下载
 
 通过 winget 包管理器一键配置
 
@@ -19,7 +21,7 @@ winget source add winget https://mirrors.ustc.edu.cn/winget-source
 | python | `winget install Python.Python.3.9`      |
 | nodejs | `winget install OpenJS.NodeJS.LTS`      |
 
-## 常用工具下载
+### 常用工具下载
 
 - vim `winget install vim.vim`
 - git `winget install Git.Git --interactive`
@@ -33,6 +35,10 @@ git config --global https.proxy socks5://127.0.0.1:10808
 ```
 
 添加 `--interactive` 参数可以完全控制安装过程
+
+### 固定软件版本
+
+- Bandizip `winget pin add --id Bandisoft.Bandizip --version 6.27`
 
 ## win 下配置 curl
 
@@ -62,4 +68,4 @@ winget install cURL.cURL
 
 ## WSL 默认 root 用户
 
-以debian为例 `debian config --default-user root`
+以 debian 为例 `debian config --default-user root`
