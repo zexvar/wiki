@@ -18,15 +18,13 @@ winget source add winget https://mirrors.ustc.edu.cn/winget-source
 |        | winget                                  |
 | ------ | --------------------------------------- |
 | java   | `winget install BellSoft.LibericaJDK.8` |
-| python | `winget install Python.Python.3.9`      |
+| python | `winget install Python.Python.3.13`     |
 | nodejs | `winget install OpenJS.NodeJS.LTS`      |
 
 ### 常用工具下载
 
-- vim `winget install vim.vim`
 - git `winget install Git.Git --interactive`
-
-vim 安装完成后需要手动设置环境变量
+- vscode `winget install Microsoft.VisualStudioCode --interactive --scope machine`
 
 ```shell
 # 为 git 设置代理
@@ -35,6 +33,7 @@ git config --global https.proxy socks5://127.0.0.1:10808
 ```
 
 添加 `--interactive` 参数可以完全控制安装过程
+添加 `--scope machine` 参数可以控制版本范围
 
 ### 固定软件版本
 
