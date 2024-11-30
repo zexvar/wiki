@@ -2,16 +2,23 @@
 
 ## 激活系统
 
+> 根据系统版本版本选择密钥
+
+| Operating system edition                      | KMS Client Product Key        |
+| --------------------------------------------- | ----------------------------- |
+| Windows 10 Professional                       | W269N-WFGWX-YVC9B-4J6C9-T83GX |
+| Windows Server 2025 Standard                  | TVRH6-WHNXV-R9WG3-9XRFY-MY832 |
+| Windows Server 2025 Datacenter                | D764K-2NDRG-47T6Q-P8T8W-YP6DF |
+| Windows Server 2025 Datacenter: Azure Edition | XGN3F-F394H-FD2MY-PP6FD-8MCRC |
+
 管理员权限运行
 
 ```bash
 # 卸载旧的密钥
 slmgr.vbs /upk
-# 安装WIN10专业版密钥
+# 安装密钥
 slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
-# 设置激活服务器
 slmgr /skms www.zoxe.top
-# 激活系统
 slmgr /ato
 ```
 
