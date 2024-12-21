@@ -13,13 +13,11 @@ services:
     container_name: cloudflared
     image: cloudflare/cloudflared
     network_mode: host
-    command: tunnel --no-autoupdate --protocol auto run --token ******
+    command: tunnel --no-autoupdate --edge-ip-version auto --protocol auto run --token ******
     restart: always
 ```
 
 ## 注意事项
 
-- 默认使用 quic 协议通信
-- 运营商对 quic 协议存在阻断
-- 通过添加 `--protocol auto` 参数
-- 在 quic 协议失败时切换到 http 协议
+- 默认使用 `quic` 协议通信 运营商对 `quic` 协议存在阻断
+- 通过设置 `--protocol http2` 参数 使用 `http2` 协议提高稳定性
