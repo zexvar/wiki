@@ -24,6 +24,8 @@
 
 ## 创建 IPV6 网络
 
+宿主机 IPV6 网络需指定网关避免丢失默认网关导致 IPV6 故障
+
 - 创建网络 `docker network create --ipv6 ip6net`
 - 指定网段 `docker network create --ipv6 --subnet fd00::/64 ip6net`
 
