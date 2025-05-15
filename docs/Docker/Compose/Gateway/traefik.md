@@ -5,7 +5,7 @@
 创建网络用于 traefik 路由 docker 服务
 
 ```shell
-docker network create main
+docker network create traefik
 ```
 
 创建配置文件
@@ -35,7 +35,7 @@ entryPoints:
 providers:
   docker:
     watch: true
-    exposedByDefault: false
+    network: traefik
     endpoint: unix:///var/run/docker.sock
   file:
     watch: true
@@ -58,7 +58,7 @@ services:
     image: traefik
     container_name: traefik
     networks:
-      - main
+      - traefik
     ports:
       - target: 80
         published: 80
