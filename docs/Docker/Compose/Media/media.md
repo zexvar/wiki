@@ -18,7 +18,7 @@ services:
     image: flaresolverr/flaresolverr
     container_name: flaresolverr
     networks:
-      - main
+      - traefik
     labels:
       - traefik.enable=true
       - traefik.http.routers.flaresolver.rule=HostRegexp(`^flare.*`)
@@ -29,7 +29,7 @@ services:
     image: linuxserver/jackett
     container_name: jackett
     networks:
-      - main
+      - traefik
     volumes:
       - ./data/jackett:/config
     environment:
@@ -44,7 +44,7 @@ services:
     image: linuxserver/prowlarr
     container_name: prowlarr
     networks:
-      - main
+      - traefik
     volumes:
       - ./data/prowlarr:/config
     environment:
@@ -59,7 +59,7 @@ services:
     image: linuxserver/radarr
     container_name: radarr
     networks:
-      - main
+      - traefik
     volumes:
       - ./data/radarr:/config
       - downloads:/downloads
@@ -75,7 +75,7 @@ services:
     image: linuxserver/sonarr
     container_name: sonarr
     networks:
-      - main
+      - traefik
     volumes:
       - ./data/sonarr:/config
       - downloads:/downloads
@@ -88,7 +88,7 @@ services:
     restart: always
 
 networks:
-  main:
+  traefik:
     external: true
 
 volumes:
