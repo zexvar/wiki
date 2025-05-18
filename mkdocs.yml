@@ -1,12 +1,12 @@
 site_name: WIKI
 site_description: wiki
-repo_url: https://github.com/DaiCae/wiki
+repo_url: https://github.com/zexvar/wiki
 edit_uri: edit/main/docs/
-copyright: Copyright &copy; 2023 DaiCae, All rights reserved.
+copyright: Copyright &copy; 2023 zexvar, All rights reserved.
 
 theme:
   name: material
-  favicon: blob/favicon.png
+  favicon: assets/images/favicon.png
   features:
     - navigation.instant
     - navigation.tracking
@@ -25,8 +25,8 @@ theme:
     # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/?h=palette#primary-color
     # Palette toggle for light mode
     - scheme: default
-      primary: light green
-      accent: lime
+      primary: lime
+      accent: yellow
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -72,12 +72,11 @@ markdown_extensions:
   - def_list
 
 extra:
-  # homepage: http://baidu.com
   version:
     provider: mike
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/DaiCae
+      link: https://github.com/zexvar
 
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js

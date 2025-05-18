@@ -13,7 +13,7 @@ hide:
             </div>
             <div class="col-sm-4">
                 <img width="95%" height="95%"
-                    src="blob/images/mirror2/1.png">
+                    src="assets/images/m1.png">
             </div>
         </div>
     </div>
@@ -25,7 +25,7 @@ hide:
         <div class="row align-items-center">
             <div class="col-md" align="center">
                 <img height="400px"
-                    src="blob/images/mirror2/4.png">
+                    src="assets/images/m4.png">
             </div>
             <div class="col-md">
                 <h2>Talk is cheap show me the code.</h2>
