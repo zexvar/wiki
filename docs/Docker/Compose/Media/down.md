@@ -4,22 +4,46 @@
 
 ```yml title='docker-compose.yml'
 services:
-  qbittorrent:
+  qbit:
     image: linuxserver/qbittorrent
-    container_name: qbittorrent
-    network_mode: host
+    container_name: qbit
+    networks:
+      - traefik
+    ports:
+      - 57891:57891
+      - 57891:57891/udp
     volumes:
-      - ./data/qbittorrent:/config
-      - downloads_data:/downloads
+      - ./data/qbit:/config
+      - downloads:/downloads
     environment:
-      - PUID=0
-      - PGID=0
+      - TZ=Asia/Shanghai
+      - TORRENTING_PORT=57891
+      - DOCKER_MODS=ghcr.io/vuetorrent/vuetorrent-lsio-mod:latest
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.qbit.rule=HostRegexp(`^qbit.*`)
+      - traefik.http.services.qbit.loadbalancer.server.port=8080
     restart: always
 
+  iyuu:
+    image: iyuucn/iyuuplus-dev
+    container_name: iyuu
+    networks:
+      - traefik
+    volumes:
+      - ./data/iyuu/data:/data
+      - ./data/iyuu/config:/iyuu
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.iyuu.rule=HostRegexp(`^iyuu.*`)
+      - traefik.http.services.iyuu.loadbalancer.server.port=8780
+    restart: always
+
+networks:
+  traefik:
+    external: true
+
 volumes:
-  downloads_data:
-    driver_opts:
-      type: nfs
-      o: addr=10.0.0.30,rw,nfsvers=4
-      device: :/mnt/main/down
+  downloads:
+    external: true
 ```
