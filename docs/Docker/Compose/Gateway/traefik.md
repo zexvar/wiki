@@ -5,7 +5,7 @@
 创建网络用于 traefik 路由 docker 服务
 
 ```shell
-docker network create traefik
+docker network create traefik --ipv6
 ```
 
 创建配置文件
@@ -18,8 +18,11 @@ api:
 entryPoints:
   web:
     address: ":80"
-    forwardedHeaders:
-      insecure: true
+    http:
+      redirections:
+        entryPoint:
+          to: websecure
+          scheme: https
   websecure:
     address: ":443"
     forwardedHeaders:
@@ -36,6 +39,7 @@ providers:
   docker:
     watch: true
     network: traefik
+    exposedByDefault: false
     endpoint: unix:///var/run/docker.sock
   file:
     watch: true
