@@ -8,7 +8,13 @@
 ## 开启 SSH
 
 通过 SN 码计算 root 密码 -> [官方网址](https://miwifi.dev/ssh)
+
 通过 Telnet 登录 root 用户
+
+```bash
+telnet 192.168.31.1
+```
+
 通过命令行开启 SSH 服务
 
 ```bash
@@ -19,10 +25,16 @@ nvram set flag_boot_success=1 & nvram commit & /etc/init.d/dropbear enable & /et
 
 ## 刷入底包
 
-上传底包到`/tmp`目录
+上传底包
 
 ```bash
-mtd -r write /tmp/openwrt.bin firmware
+scp factory.bin 192.168.31.1:/tmp
+```
+
+写入底包
+
+```bash
+mtd -r write /tmp/factory.bin firmware
 ```
 
 ## 升级系统
